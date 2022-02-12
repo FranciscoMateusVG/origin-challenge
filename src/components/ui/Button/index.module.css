@@ -1,0 +1,27 @@
+.buttonStyle {
+  background: #ffff;
+  width: 320px;
+  height: 56px;
+  border-radius: 32px;
+  padding: 0;
+  border: 3px solid #021463;
+  cursor: pointer;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #021463;
+}
+
+.buttonStyle:hover {
+  border: 3px solid #566ccc;
+  color: #566ccc;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
