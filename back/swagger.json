@@ -1,0 +1,75 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API for calculating user score level",
+    "version": "1.0.0",
+    "title": "Score Backend API",
+    "contact": {
+      "email": "franciscomateusvg@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags": [
+    {
+      "name": "Score",
+      "description": "Find out user score"
+    }
+  ],
+
+  "schemes": ["http"],
+  "host": "localhost:2030",
+  "basePath": "/",
+  "paths": {
+    "/result": {
+      "get": {
+        "tags": ["Score"],
+        "summary": "Get score of user based on monthly costs",
+        "description": "Based on the user monthly costs and annual income the system should calculate a score to represent how healthy his financial life is.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "monthly_costs",
+            "in": "query",
+            "description": "How much the user spends per month",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "annual_income",
+            "in": "query",
+            "description": "How much the user gains per year",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Score"
+            }
+          },
+          "400": {
+            "description": "Bad parameters!"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Score": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "string"
+        },
+        "err": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
