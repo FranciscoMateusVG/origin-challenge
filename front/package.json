@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-text-mask": "^5.4.11",
+    "axios": "^0.25.0",
     "formik": "^2.2.9",
     "next": "latest",
     "react": "^17.0.2",

@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 
 interface IMessage {
-  status: "high" | "medium" | "low";
+  status: "HEALTHY" | "MEDIUM" | "LOW" | "";
 }
 
 export const Message: React.FC<IMessage> = ({ status }) => {
@@ -9,19 +9,21 @@ export const Message: React.FC<IMessage> = ({ status }) => {
   let sub = "";
 
   switch (status) {
-    case "high":
+    case "HEALTHY":
       main = "Congratulations!";
       sub = "Your financial wellness score is Healthy.";
       break;
-    case "medium":
+    case "MEDIUM":
       main = "There is room for improvement.";
       sub = "Your financial wellness score is Average.";
       break;
-    case "low":
+    case "LOW":
       main = "Caution!";
       sub = "Your financial wellness score is Unhealthy.";
       break;
     default:
+      main = "";
+      sub = "";
       break;
   }
 

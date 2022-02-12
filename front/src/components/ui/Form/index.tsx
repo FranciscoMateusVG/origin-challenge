@@ -19,8 +19,13 @@ export const FormComponent: React.FC = () => {
         MonthlyCosts: "",
       }}
       onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
-        console.log(values);
-        router.push("/result");
+        const { Annualincome, MonthlyCosts } = values;
+        const withoutCommasAnnualincome = Annualincome.replaceAll(",", "");
+        const withoutCommasMonthlyCosts = MonthlyCosts.replaceAll(",", "");
+
+        router.push(
+          `/result?annual_income=${withoutCommasAnnualincome}&monthly_costs=${withoutCommasMonthlyCosts}`
+        );
       }}
     >
       <Form>

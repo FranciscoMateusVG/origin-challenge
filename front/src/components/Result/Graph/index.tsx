@@ -4,15 +4,16 @@ import { Medium } from "src/components/ui/svg/Medium";
 import styles from "./index.module.css";
 
 interface IGraph {
-  status: "high" | "medium" | "low";
+  status: "HEALTHY" | "MEDIUM" | "LOW" | "";
 }
 
 export const Graph: React.FC<IGraph> = ({ status }) => {
   return (
     <div>
-      {status === "high" && <High />}
-      {status === "medium" && <Medium />}
-      {status === "low" && <Low />}
+      {status === "HEALTHY" && <High />}
+      {status === "MEDIUM" && <Medium />}
+      {status === "LOW" && <Low />}
+      {!status && <p>Loading...</p>}
     </div>
   );
 };
