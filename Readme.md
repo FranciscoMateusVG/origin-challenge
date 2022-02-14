@@ -8,7 +8,15 @@ In order to do that, users should register information regarding their financial
 
 ### BackEnd
 
+The back end is a microservice that calculates the user score. It is split into three main parts:
+
+1- Routes: Where we define the right method and path to call the api
+2- Middleware: Where we check if the parameters send to the api is sufficient for the service to calculate the user score.
+3- Controller: Where we receive the parameters and calculate the user score. The business logic is applied here.
+
 ### FrontEnd
+
+The FrontEnd is a microservice that works based on react's main principle of atomicization. The main focus here are the 'pages' folder (that works as an component manager) and the 'components' folder which gathers all micro components that are highly reusable. The layout components for example is a special component that is reused across all pages. And the UI components gather all sorts of reusuble components as cards, buttons, inputs and forms!
 
 ## Installation
 
@@ -56,14 +64,6 @@ npm run dev
 # Or:
 yarn
 yarn run dev
-```
-
-If you wish you can also run the jest tests with:
-
-```bash
-npm run test
-# Or:
-yarn run test
 ```
 
 There is also the possibility of launching ready to production. In this case it will be created a '.next' folder in the directory with the code compiled into javascript.
