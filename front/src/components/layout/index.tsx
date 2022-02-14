@@ -1,15 +1,10 @@
-import { LockIcon } from "src/components/ui/svg/LockIcon";
-import { Logo } from "src/components/ui/svg/Logo";
 import Footer from "./Footer";
-import styles from "./index.module.css";
+import { Head } from "./Head";
 
-export const Header: React.FC = ({ children }) => {
-  const { containerHeader, containerFooter, textContainer, textFooter } =
-    styles;
-
+export const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <Header />
+      <Head />
       {children}
       <Footer />
     </>
