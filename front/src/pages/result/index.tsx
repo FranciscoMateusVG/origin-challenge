@@ -4,10 +4,15 @@ import { Title } from "src/components/ui/Title";
 import { Card } from "src/components/ui/Card";
 import { CompactLogo } from "src/components/ui/svg/CompactLogo";
 import { Result } from "src/components/Result";
+import { Button } from "src/components/ui/Button";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+  const { containerMain, containerSub } = styles;
+
   return (
-    <div className={styles.container}>
+    <div className={containerMain}>
       <Head>
         <title>Origin - Result</title>
       </Head>
@@ -15,18 +20,10 @@ export default function Home() {
         Here's your <b>financial wellness score:</b>
       </Title>
       <Card>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "30px",
-            width: "100%",
-            alignItems: "center",
-          }}
-        >
+        <div className={containerSub}>
           <CompactLogo />
           <Result />
-          {/* <Button /> */}
+          <Button onClick={() => router.push("/")}>Return</Button>
         </div>
       </Card>
     </div>

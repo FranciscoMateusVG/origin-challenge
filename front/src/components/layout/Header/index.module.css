@@ -46,12 +46,22 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
+  width: 100%;
   color: #708797;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+@media (max-width: 800px) {
+  .containerFooter {
+    height: 130px;
+  }
+  .textContainer {
     flex-direction: column;
+    gap: 5px;
+  }
+  .textFooter {
+    /* atributes */
+    font-size: 12px;
+    width: 288px;
+    text-align: center;
   }
 }

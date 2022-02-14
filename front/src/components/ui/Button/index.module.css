@@ -19,9 +19,8 @@
   color: #566ccc;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (max-width: 800px) {
+  .buttonStyle {
+    width: 250px;
   }
 }

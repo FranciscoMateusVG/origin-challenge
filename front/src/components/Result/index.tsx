@@ -1,4 +1,3 @@
-import { Button } from "../ui/Button";
 import { Graph } from "./Graph";
 import styles from "./index.module.css";
 import { Message } from "./Message";
@@ -32,7 +31,6 @@ export const Result: React.FC = () => {
     <div>
       <Graph status={score} />
       <Message status={score} />
-      <Button onClick={() => console.log("a")}>Return</Button>
     </div>
   );
 };

@@ -1,16 +1,6 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(242, 247, 249);
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (max-width: 800px) {
+  .graphContainer {
+    justify-content: center;
+    display: flex;
   }
 }

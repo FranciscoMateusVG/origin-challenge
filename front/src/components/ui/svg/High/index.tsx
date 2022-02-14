@@ -4,16 +4,8 @@ export const High: React.FC = ({}) => {
   const { container } = styles;
 
   return (
-    <div
-      style={{ display: "flex", alignContent: "center", alignItems: "center" }}
-    >
-      <svg
-        width="444"
-        height="24"
-        viewBox="0 0 444 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className={container}>
+      <svg viewBox="0 0 444 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="1"
           y="1"

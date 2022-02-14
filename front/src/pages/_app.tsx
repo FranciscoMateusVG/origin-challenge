@@ -5,7 +5,6 @@ import { Header } from "src/components/layout/Header";
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Header>
-      {" "}
       <Component {...pageProps} />
     </Header>
   );

@@ -4,9 +4,7 @@ export const CompactLogo: React.FC = ({}) => {
   const { container } = styles;
 
   return (
-    <div
-      style={{ display: "flex", alignContent: "center", alignItems: "center" }}
-    >
+    <div className={container}>
       <svg
         width="64"
         height="64"

@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
 
 export const Submit: React.FC = ({ children }) => {
-  const { buttonStyle } = styles;
+  const { submitContainer, buttonStyle } = styles;
   return (
-    <div>
+    <div className={submitContainer}>
       <button type="submit" className={buttonStyle}>
         Continue
       </button>

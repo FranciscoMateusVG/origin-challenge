@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-
 import styles from "./index.module.css";
 import { Title } from "../components/ui/Title/index";
 import { Card } from "../components/ui/Card/index";
@@ -8,8 +6,17 @@ import { CompactLogo } from "src/components/ui/svg/CompactLogo";
 import { FormComponent } from "../components/ui/Form/index";
 
 export default function Home() {
+  const {
+    mainContainer,
+    subContainer,
+    logoContainer,
+    logoMessageMain,
+    logoMessageSub,
+    messageContainer,
+  } = styles;
+
   return (
-    <div className={styles.container}>
+    <div className={mainContainer}>
       <Head>
         <title>Origin - Home Screen</title>
       </Head>
@@ -17,19 +24,15 @@ export default function Home() {
         Let's find out your <b>financial wellness score.</b>
       </Title>
       <Card>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "30px",
-            width: "100%",
-          }}
-        >
-          <div style={{ display: "flex" }}>
+        <div className={subContainer}>
+          <div className={logoContainer}>
             <CompactLogo />
-            <div>
-              <p>Financial wellness test</p>
-              <p>Enter your financial information below</p>
+
+            <div className={messageContainer}>
+              <div className={logoMessageMain}>Financial wellness test</div>
+              <div className={logoMessageSub}>
+                Enter your financial information below
+              </div>
             </div>
           </div>
 

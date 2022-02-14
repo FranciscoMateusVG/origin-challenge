@@ -8,8 +8,10 @@ interface IGraph {
 }
 
 export const Graph: React.FC<IGraph> = ({ status }) => {
+  const { graphContainer } = styles;
+
   return (
-    <div>
+    <div className={graphContainer}>
       {status === "HEALTHY" && <High />}
       {status === "MEDIUM" && <Medium />}
       {status === "LOW" && <Low />}

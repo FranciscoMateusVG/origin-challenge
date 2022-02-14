@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import { Formik, Form, FormikHelpers } from "formik";
+import { Formik, Form } from "formik";
 import { Input } from "./Input";
 import { Submit } from "./Submit";
 import { useRouter } from "next/router";
@@ -10,31 +10,35 @@ interface Values {
 }
 
 export const FormComponent: React.FC = () => {
+  const { inputContainer, formContainer } = styles;
   const router = useRouter();
 
+  const initialValues = {
+    Annualincome: "",
+    MonthlyCosts: "",
+  };
+
+  const onSubmit = (values: Values) => {
+    const { Annualincome, MonthlyCosts } = values;
+    const withoutCommasAnnualincome = Annualincome.replaceAll(",", "");
+    const withoutCommasMonthlyCosts = MonthlyCosts.replaceAll(",", "");
+
+    router.push(
+      `/result?annual_income=${withoutCommasAnnualincome}&monthly_costs=${withoutCommasMonthlyCosts}`
+    );
+  };
+
   return (
-    <Formik
-      initialValues={{
-        Annualincome: "",
-        MonthlyCosts: "",
-      }}
-      onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
-        const { Annualincome, MonthlyCosts } = values;
-        const withoutCommasAnnualincome = Annualincome.replaceAll(",", "");
-        const withoutCommasMonthlyCosts = MonthlyCosts.replaceAll(",", "");
-
-        router.push(
-          `/result?annual_income=${withoutCommasAnnualincome}&monthly_costs=${withoutCommasMonthlyCosts}`
-        );
-      }}
-    >
+    <Formik initialValues={initialValues} onSubmit={onSubmit}>
       <Form>
-        <div style={{ display: "flex" }}>
-          <Input name="Annual income" />
-          <Input name="Monthly Costs" />
-        </div>
+        <div className={formContainer}>
+          <div className={inputContainer}>
+            <Input name="Annual income" />
+            <Input name="Monthly Costs" />
+          </div>
 
-        <Submit />
+          <Submit />
+        </div>
       </Form>
     </Formik>
   );

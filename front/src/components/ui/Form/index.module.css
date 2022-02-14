@@ -1,67 +1,23 @@
 .inputContainer {
-  position: relative;
-}
-.inputLabel {
-  position: absolute;
-  top: -20px;
-  font-family: Work Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
-  /* identical to box height, or 21px */
-
-  /* $blueGray900 */
-  color: #1e2a32;
-}
-.inputField {
-  /* Attributes */
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 120%;
-  color: #4d6475;
-
-  /* $neutralWhite */
-  background: #ffffff;
-  /* $blueGray50 */
-  border: 1px solid #e9eef2;
-  box-sizing: border-box;
-  border-radius: 4px;
-
-  width: 232px;
-  height: 56px;
-  border-radius: 4px;
-
-  padding-left: 44px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.inputIcon {
-  position: absolute;
-  top: 16px;
-  left: 12px;
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 145px;
 }
 
-.inputField:focus {
-  outline: none;
-}
-
-/* Chrome, Safari, Edge, Opera */
-.inputField::-webkit-outer-spin-button,
-.inputField::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-.inputField[type="number"] {
-  -moz-appearance: textfield;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+@media (max-width: 800px) {
+  .inputContainer {
     flex-direction: column;
+    gap: 40px;
+    padding-left: 16px;
+  }
+
+  .formContainer {
+    height: 225px;
   }
 }

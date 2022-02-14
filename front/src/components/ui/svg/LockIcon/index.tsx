@@ -4,9 +4,7 @@ export const LockIcon: React.FC = ({}) => {
   const { container } = styles;
 
   return (
-    <div
-      style={{ display: "flex", alignContent: "center", alignItems: "center" }}
-    >
+    <div className={container}>
       <svg
         width="24"
         height="24"

@@ -1,16 +1,38 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(242, 247, 249);
+.messageContainer {
+  padding-top: 10px;
+}
+.mainStyle {
+  /* LG / headingSmall */
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  /* identical to box height, or 29px */
+  text-align: center;
+  margin: 0;
+  /* $blueGray900 */
+  color: #1e2a32;
+}
+.subStyle {
+  /* LG / paragraph */
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  text-align: center;
+  margin: 0;
+  /* $blueGray600 */
+  color: #4d6475;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (max-width: 800px) {
+  .mainStyle {
+    font-size: 20px;
+  }
+  .subStyle {
+    font-size: 14px;
   }
 }

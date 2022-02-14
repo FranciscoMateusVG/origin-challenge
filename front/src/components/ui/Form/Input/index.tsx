@@ -50,7 +50,7 @@ export const Input: React.FC<IInput> = ({ name }) => {
           <CurrencyInput
             {...field}
             id={nameWithoutWhiteSpace}
-            placeholder="Enter"
+            placeholder="0.00"
             type="text"
             className={inputField}
           />

@@ -5,32 +5,45 @@ interface IMessage {
 }
 
 export const Message: React.FC<IMessage> = ({ status }) => {
+  const { messageContainer, mainStyle, subStyle } = styles;
+
   let main = "";
-  let sub = "";
+  let sub = <span></span>;
 
   switch (status) {
     case "HEALTHY":
       main = "Congratulations!";
-      sub = "Your financial wellness score is Healthy.";
+      sub = (
+        <span>
+          Your financial wellness score is <b>Healthy.</b>
+        </span>
+      );
       break;
     case "MEDIUM":
       main = "There is room for improvement.";
-      sub = "Your financial wellness score is Average.";
+      sub = (
+        <span>
+          Your financial wellness score is <b>Average.</b>
+        </span>
+      );
       break;
     case "LOW":
       main = "Caution!";
-      sub = "Your financial wellness score is Unhealthy.";
+      sub = (
+        <span>
+          Your financial wellness score is <b>Unhealthy.</b>
+        </span>
+      );
       break;
     default:
       main = "";
-      sub = "";
       break;
   }
 
   return (
-    <div>
-      <p>{main}</p>
-      <p>{sub}</p>
+    <div className={messageContainer}>
+      <p className={mainStyle}>{main}</p>
+      <p className={subStyle}>{sub}</p>
     </div>
   );
 };

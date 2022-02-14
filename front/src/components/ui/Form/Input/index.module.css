@@ -59,9 +59,12 @@
   -moz-appearance: textfield;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (max-width: 800px) {
+  .inputLabel {
+    font-size: 12px;
+  }
+
+  .inputField {
+    width: 256px;
   }
 }
