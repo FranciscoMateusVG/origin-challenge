@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import { Title } from "src/components/ui/Title";
 import { Card } from "src/components/ui/Card";
 import { CompactLogo } from "src/components/ui/svg/CompactLogo";
-import { Result } from "src/components/Result";
+import { Result } from "src/components/ui/Result";
 import { Button } from "src/components/ui/Button";
 import { useRouter } from "next/router";
 

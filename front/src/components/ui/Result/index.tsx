@@ -1,5 +1,4 @@
 import { Graph } from "./Graph";
-import styles from "./index.module.css";
 import { Message } from "./Message";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
