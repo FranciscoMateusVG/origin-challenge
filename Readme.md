@@ -10,9 +10,9 @@ In order to do that, users should register information regarding their financial
 
 The back end is a microservice that calculates the user score. It is split into three main parts:
 
-1- Routes: Where we define the right method and path to call the api
-2- Middleware: Where we check if the parameters send to the api is sufficient for the service to calculate the user score.
-3- Controller: Where we receive the parameters and calculate the user score. The business logic is applied here.
+- Routes: Where we define the right method and path to call the api
+- Middleware: Where we check if the parameters send to the api is sufficient for the service to calculate the user score.
+- Controller: Where we receive the parameters and calculate the user score. The business logic is applied here.
 
 ### FrontEnd
 
